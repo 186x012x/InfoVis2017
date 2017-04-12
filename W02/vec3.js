@@ -1,38 +1,39 @@
-//Constractor
+//Constructor
 Vec3 = function( x,y,z ){
 	this.x = x;
 	this.y = y;
-	this.z = z
+	this.z = z;
 }
 
-//Add method
-Vec3.prototype.add( v ){
+//Add method\\\\
+Vec3.prototype.add = function( v ){
 	this.x += v.x;
 	this.y += v.y;
 	this.z += v.z;
 	return this;
 }
+
 //min method
-Vec3.prototype.min( v ){
-	return Math.min(v.x,v.y,v.z);
+Vec3.prototype.min = function(){
+	return Math.min(this.x,this.y,this.z);
 }
 
 //max method
-Vec3.prototype.max( v ){
-	return Math.max(v.x,v.y,v.z);
+Vec3.prototype.max = function(){
+	return Math.max(this.x,this.y,this.z);
 }
 
 //mid method
-Vec3.prototype.mid( v ){
-	vec mid;
-	if(v.x<v.z && v.x>v.y){
-		mid = v.x;
+Vec3.prototype.mid = function(){
+	var mid;
+	if(this.x<this.z && this.x>this.y){
+		mid = this.x;
 	}
-	else if(v.y<v.Z && v.y>v.x){
-		mid = v.y;
+	else if(this.y<this.Z && this.y>this.x){
+		mid = this.y;
 	}
-	else if(v.z<v.x && v.z>v.y){
-		mid = v.z;
+	else if(this.z<this.x && this.z>this.y){
+		mid = this.z;
 	}
 	else{
 		mid = "error";
@@ -41,6 +42,6 @@ Vec3.prototype.mid( v ){
 }
 
 //Sum method
-Vec3.prototype.sum = function{
+Vec3.prototype.sum = function(){
 	return this.x+this.y+this.z;
 }
