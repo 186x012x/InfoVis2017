@@ -39,7 +39,7 @@ function main()
         [1,4,0],
         [1,5,4],
         [3,6,2],
-        [3,7,2],
+        [3,7,6],
         [4,6,7],
         [4,5,6],
         [1,3,2],
@@ -131,8 +131,8 @@ function main()
     function loop()
     {
         requestAnimationFrame( loop );
-        triangle.rotation.x += 0.001;
-        triangle.rotation.y += 0.001;
+        triangle.rotation.x += 0.01;
+        triangle.rotation.y += 0.01;
         renderer.render( scene, camera );
     }
 
