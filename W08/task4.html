@@ -3,7 +3,7 @@
 	<title>W08: task4</title>
     </head>
     <body>
-	<script src="http://mrdoob.github.io/three.js/build/three.min.js"></script>
+	<script src="three.min.js"></script>
 
 	<script type="x-shader/x-vertex" id="gouraud.vert">
 		varying vec3 point_color;
@@ -81,8 +81,6 @@
         	float F = ((g-c)*(g-c)/((g+c)*(g+c)))*(1.0+(c*(g+c)-1.0)*(c*(g+c)-1.0)/((c*(g-c)-1.0)*(c*(g-c)-1.0)));
  	
     	    float specularLight = D*G*F/NV;
-  			//specular = ks*specularLight;
-
 
 			float dd = max( dot( N, L ), 0.0 );
 			float ds = pow( max( dot( H, N), 0.0 ), n );
